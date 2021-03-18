@@ -9,9 +9,10 @@ import Control.Monad.IO.Class (MonadIO)
 import Control.Monad.State.Class (MonadState)
 import Data.Array.IArray
 import Data.Array.Unboxed (UArray) 
-import Data.LinearProgram
+import Data.LinearProgram hiding ((+),(-),(*),mod,div)
 import Data.Map.Lazy (Map, fromList, union)
 import qualified Data.Map.Lazy as Data.Map
+import Prelude 
 
 -- | Generate all combinations without repetition of given length.
 generateCombinations :: [a] -- ^ source list

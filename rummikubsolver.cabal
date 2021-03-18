@@ -22,7 +22,7 @@ library
                        , Interface.GUI
   other-modules:       Interface.Common
   -- other-extensions:    
-  build-depends:       base >=4.6 && <4.7
+  build-depends:       base >=4.6 
                        , array
                        , containers
                        , glpk-hs
@@ -41,18 +41,18 @@ executable rummikubsolver
   main-is:             Main.hs
   -- other-modules:       
   -- other-extensions:    
-  build-depends:       base >=4.6 && <4.7
+  build-depends:       base >=4.6
                        , mtl
                        , rummikubsolver
                        , safe
   hs-source-dirs:      executables
-  ghc-options:         -Wall -fwarn-unused-imports -fno-warn-unused-do-bind
+  ghc-options:         -Wall -fwarn-unused-imports -fno-warn-unused-do-bind -threaded
   default-language:    Haskell2010
 
 test-suite test-rummikubsolver
   type:       exitcode-stdio-1.0
   main-is:             Main.hs
-  build-depends:       base >=4.6 && <4.7
+  build-depends:       base >=4.6
                        , HUnit
                        , rummikubsolver
   hs-source-dirs:      test
